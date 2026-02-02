@@ -1,5 +1,7 @@
-class Usuario:
-    def __init__(self, id: int, nombre: str, email: str):
-        self.id = id
-        self.nombre = nombre
-        self.email = email
+from pydantic import BaseModel
+from typing import Optional
+
+class Usuario(BaseModel):
+    id: Optional[int] = None
+    nombre: str
+    email: str
